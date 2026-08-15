@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso Exclusivo & Bônus de Cadastro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0e14;
+            --card-bg: #141923;
+            --card-border: #232b3b;
+            --primary-gradient: linear-gradient(135deg, #00e676 0%, #00b0ff 100%);
+            --btn-hover: linear-gradient(135deg, #00c853 0%, #0091ea 100%);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --gold: #ffd700;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-image: 
+                radial-gradient(circle at 50% 10%, rgba(0, 230, 118, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 50% 90%, rgba(0, 176, 255, 0.08) 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 460px;
+            width: 100%;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-gradient);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 215, 0, 0.1);
+            color: var(--gold);
+            border: 1px solid rgba(255, 215, 0, 0.25);
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .badge-dot {
+            width: 7px;
+            height: 7px;
+            background-color: #00e676;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #00e676;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        h1 span {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+
+        .features {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 24px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #e5e7eb;
+        }
+
+        .feature-icon {
+            color: #00e676;
+            font-size: 16px;
+        }
+
+        .cta-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            background: var(--primary-gradient);
+            color: #080b10;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 16px;
+            padding: 16px 24px;
+            border-radius: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 230, 118, 0.35);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(0, 230, 118, 0.5);
+            background: var(--btn-hover);
+        }
+
+        .secure-notice {
+            margin-top: 18px;
+            font-size: 12px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        footer {
+            margin-top: 24px;
+            text-align: center;
+            font-size: 11px;
+            color: #6b7280;
+            max-width: 400px;
+            line-height: 1.4;
+        }
+
+        .age-warning {
+            display: inline-block;
+            background: rgba(239, 68, 68, 0.15);
+            color: #ef4444;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 6px;
+            padding: 2px 6px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="badge">
+            <span class="badge-dot"></span> Link Oficial Verificado
+        </div>
+
+        <h1>Plataforma Oficial <span>73J</span></h1>
+        <p class="subtitle">Acesse o servidor oficial para cadastro rápido, resgate de bônus exclusivos e suporte 24h.</p>
+
+        <div class="features">
+            <div class="feature-item">
+                <span class="feature-icon">⚡</span> Cadastro rápido via celular em 30 segundos
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">🎁</span> Bônus de boas-vindas liberado no primeiro acesso
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">🔒</span> Conexão direta e protegida via SSL
+            </div>
+        </div>
+
+        <!-- Botão com seu link de afiliado -->
+        <a href="https://73j05.com/?pid=4780323677&fromPage=AGENCY_CENTER" class="cta-button" target="_blank" rel="noopener noreferrer">
+            Acessar Plataforma Oficial ➔
+        </a>
+
+        <div class="secure-notice">
+            <span>🛡️</span> Redirecionamento 100% Seguro
+        </div>
+    </div>
+
+    <footer>
+        <div class="age-warning">+18 ANOS</div>
+        <p>Jogue com responsabilidade. Apostas envolvem risco financeiro. Proibido para menores de 18 anos.</p>
+    </footer>
+
+</body>
+</html>
